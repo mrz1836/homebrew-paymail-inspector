@@ -3,21 +3,21 @@ class PaymailInspector < Formula
   desc "CLI app for interacting with paymail service providers
 "
   homepage "https://github.com/mrz1836/paymail-inspector"
-  version "0.1.13"
+  version "0.1.14"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.1.13/paymail-inspector_macOS_64-bit.tar.gz"
-    sha256 "5d922a861648725505458b76dfe5e59130bd808a45d2b14a5d52355009b51839"
+    url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.1.14/paymail-inspector_macOS_64-bit.tar.gz"
+    sha256 "d00766dd4dbd132a0bf26a99b04d87845dbbeb045144607ec1889724beeda6c2"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.1.13/paymail-inspector_Linux_64-bit.tar.gz"
-      sha256 "4cac310ee269e3fc5b886e6f455869fd9e62c75bbb14e9f76d64da933d5dbd33"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.1.14/paymail-inspector_Linux_64-bit.tar.gz"
+      sha256 "b3b87ab97904dc330acec40b4f780871ebe4ae809bb58a1328a7dedcd1666548"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.1.13/paymail-inspector_Linux_arm64.tar.gz"
-        sha256 "2fd071f09514d3a63f2877579e939104e1dcfcd09c30620675b4922b8ac59619"
+        url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.1.14/paymail-inspector_Linux_arm64.tar.gz"
+        sha256 "b87e0051dbcd0f17fb05b6616f4bbde68b7c1085d5e0a2b5c8a6153f653d43a0"
       else
       end
     end
