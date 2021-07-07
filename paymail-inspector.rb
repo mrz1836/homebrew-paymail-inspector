@@ -6,28 +6,28 @@ class PaymailInspector < Formula
   desc "CLI app for interacting with paymail service providers
 "
   homepage "https://github.com/mrz1836/paymail-inspector"
-  version "0.3.10"
+  version "0.3.11"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.10/paymail-inspector_macOS_64-bit.tar.gz"
-      sha256 "065aab3ceb981922c13a0a28b3946f7adf467460529a30b380ada939a1dbc2b2"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.11/paymail-inspector_macOS_64-bit.tar.gz"
+      sha256 "abfccc08102645aad2ad091df3329ca3bef04de22ca144a4947b6761897c0ad2"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.10/paymail-inspector_macOS_arm64.tar.gz"
-      sha256 "5e381a5443aa430773008046437a8de6da2715aad1bbac430ce76185d25da86e"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.11/paymail-inspector_macOS_arm64.tar.gz"
+      sha256 "4bc7e2f402ae4b7883e116ce5c0b1099a3d805f7f5a9969dc19fbb6c2af2b82a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.10/paymail-inspector_Linux_64-bit.tar.gz"
-      sha256 "b371df440bc654e32a03ea5cd4a55dbe71421ead378353ce000196049e792c2b"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.11/paymail-inspector_Linux_64-bit.tar.gz"
+      sha256 "cd8ebdc716faf5758cb9b8fa71274fe337f780956bcf09dfd3e0436be906d052"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.10/paymail-inspector_Linux_arm64.tar.gz"
-      sha256 "d35f0da6db6fcb756f7cb3ef991f8925131490ef14f3f7cf1c689a3e3817d177"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.11/paymail-inspector_Linux_arm64.tar.gz"
+      sha256 "fce0684729cae1e1186cca2897a7db99724dbadc116a16c83a3921af5e72f1b1"
     end
   end
 
