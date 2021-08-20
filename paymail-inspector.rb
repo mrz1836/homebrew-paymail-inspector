@@ -6,28 +6,28 @@ class PaymailInspector < Formula
   desc "CLI app for interacting with paymail service providers
 "
   homepage "https://github.com/mrz1836/paymail-inspector"
-  version "0.3.11"
+  version "0.3.12"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.11/paymail-inspector_macOS_64-bit.tar.gz"
-      sha256 "abfccc08102645aad2ad091df3329ca3bef04de22ca144a4947b6761897c0ad2"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.12/paymail-inspector_macOS_64-bit.tar.gz"
+      sha256 "dd28fffb6944f0c664c61752713943a8fae0d39955b4b852d0d9880528110819"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.11/paymail-inspector_macOS_arm64.tar.gz"
-      sha256 "4bc7e2f402ae4b7883e116ce5c0b1099a3d805f7f5a9969dc19fbb6c2af2b82a"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.12/paymail-inspector_macOS_arm64.tar.gz"
+      sha256 "63876d1511b5ba700ea35e620253215fb3f56b0bdc8a5ee99240af42b607636b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.11/paymail-inspector_Linux_64-bit.tar.gz"
-      sha256 "cd8ebdc716faf5758cb9b8fa71274fe337f780956bcf09dfd3e0436be906d052"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.12/paymail-inspector_Linux_64-bit.tar.gz"
+      sha256 "148d964177cab717ac071555009f17c2199f4cbb71505497b1c72804a4b755a2"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.11/paymail-inspector_Linux_arm64.tar.gz"
-      sha256 "fce0684729cae1e1186cca2897a7db99724dbadc116a16c83a3921af5e72f1b1"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.12/paymail-inspector_Linux_arm64.tar.gz"
+      sha256 "8af9ef6a881e103e3fd7fe64af973fd303c52382a9668caa94211466ae08600b"
     end
   end
 
