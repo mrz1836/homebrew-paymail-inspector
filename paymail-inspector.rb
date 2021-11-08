@@ -6,29 +6,44 @@ class PaymailInspector < Formula
   desc "CLI app for interacting with paymail service providers
 "
   homepage "https://github.com/mrz1836/paymail-inspector"
-  version "0.3.13"
-  bottle :unneeded
+  version "0.3.15"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.15/paymail-inspector_macOS_arm64.tar.gz"
+      sha256 "fa87b59cfe4e6fd429c98cb00579655e006346333dec77759edff0067ab9f32b"
+
+      def install
+        bin.install "paymail"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.13/paymail-inspector_macOS_64-bit.tar.gz"
-      sha256 "026f33e9b8e8b565f8147d64ccde6b438aea2c9dc66163f1707b40e51716397d"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.15/paymail-inspector_macOS_64-bit.tar.gz"
+      sha256 "e4b1a798da42a11b6965972d7091321e84c6be05f101506949e369bcd6260a6c"
+
+      def install
+        bin.install "paymail"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.13/paymail-inspector_Linux_64-bit.tar.gz"
-      sha256 "85c4845c3d1b1263d27b23c9cd119f23f577cad46e80a75a43a7dbb5efda3d2f"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.15/paymail-inspector_Linux_64-bit.tar.gz"
+      sha256 "7a539938f25b2bd2a69667eef53e3254e777ccd24ed28e8a601f69006aae0f66"
+
+      def install
+        bin.install "paymail"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.13/paymail-inspector_Linux_arm64.tar.gz"
-      sha256 "6c4012884a35e8a3d81d33f949c00933378bf976c3a5bf4fa98dd6d36013eb5d"
-    end
-  end
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.15/paymail-inspector_Linux_arm64.tar.gz"
+      sha256 "7a45bcbfb7adeec0e08570400da324f450259384b58d5d138354612052579984"
 
-  def install
-    bin.install "paymail"
+      def install
+        bin.install "paymail"
+      end
+    end
   end
 
   def caveats; <<~EOS
