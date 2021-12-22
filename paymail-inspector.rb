@@ -6,20 +6,20 @@ class PaymailInspector < Formula
   desc "CLI app for interacting with paymail service providers
 "
   homepage "https://github.com/mrz1836/paymail-inspector"
-  version "0.3.15"
+  version "0.3.16"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.15/paymail-inspector_macOS_arm64.tar.gz"
-      sha256 "fa87b59cfe4e6fd429c98cb00579655e006346333dec77759edff0067ab9f32b"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.16/paymail-inspector_macOS_arm64.tar.gz"
+      sha256 "00f8a052895284a430ab088dd7a7d974e8cf14618274e187b3bde15af453b73d"
 
       def install
         bin.install "paymail"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.15/paymail-inspector_macOS_64-bit.tar.gz"
-      sha256 "e4b1a798da42a11b6965972d7091321e84c6be05f101506949e369bcd6260a6c"
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.16/paymail-inspector_macOS_64-bit.tar.gz"
+      sha256 "d7a7b0167e1accee86d8271a1b99e599fea4362bc905b0bbe8564c876f846eae"
 
       def install
         bin.install "paymail"
@@ -28,17 +28,17 @@ class PaymailInspector < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.15/paymail-inspector_Linux_64-bit.tar.gz"
-      sha256 "7a539938f25b2bd2a69667eef53e3254e777ccd24ed28e8a601f69006aae0f66"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.16/paymail-inspector_Linux_arm64.tar.gz"
+      sha256 "61438528645b5394da36e2b2b31fda2b51a5a9d673b7102df41d57e7ec57cb5b"
 
       def install
         bin.install "paymail"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.15/paymail-inspector_Linux_arm64.tar.gz"
-      sha256 "7a45bcbfb7adeec0e08570400da324f450259384b58d5d138354612052579984"
+    if Hardware::CPU.intel?
+      url "https://github.com/mrz1836/paymail-inspector/releases/download/v0.3.16/paymail-inspector_Linux_64-bit.tar.gz"
+      sha256 "8ced392c7393e4ccf4746e790b6cdbe5a2d0acb2909f62a203dc3d515d257413"
 
       def install
         bin.install "paymail"
